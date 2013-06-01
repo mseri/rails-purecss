@@ -1,6 +1,6 @@
 require "purecss/version"
+require "purecss/generators/install_generator"
 
 module Purecss
-  class Engine < Rails::Engine
-  end
+  require "purecss/engine"
 end
