@@ -1,5 +1,6 @@
 require "purecss/version"
 
 module Purecss
-  # Your code goes here...
+  class Engine < Rails::Engine
+  end
 end
