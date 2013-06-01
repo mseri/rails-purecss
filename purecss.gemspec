@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "purecss"
   spec.version       = Purecss::VERSION
   spec.authors       = ["mseri"]
-  spec.email         = ["seriedivergente@gmail.com"]
+  spec.email         = ["marcello.seri@gmail.com"]
   spec.description   = %q{Pure CSS (purecss.io) for Rails 3.1 Asset Pipeline}
   spec.summary       = %q{Pure (purecss.io) is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.}
   spec.homepage      = "https://github.com/mseri/rails-purecss"
