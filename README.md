@@ -68,3 +68,8 @@ Enjoy!
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Changelog
+
+0.0.2 GEM restructured following [Gemify Assets for Rails](http://prioritized.net/blog/gemify-assets-for-rails/), added individual modules, improved size
+
