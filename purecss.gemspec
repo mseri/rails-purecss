@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Pure (purecss.io) is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.}
   spec.homepage      = "https://github.com/mseri/rails-purecss"
 
-  spec.files = Dir["{lib,vendor}/**/*"] + ["README.md"]
+  spec.files = Dir["{app,lib,vendor}/**/*"] + ["README.md"]
   #spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
