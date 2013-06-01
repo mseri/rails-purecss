@@ -8,10 +8,6 @@ I cite directly from [purecss.io](http://purecss.io)
  >
  > Pure is ridiculously tiny. The entire set of modules clocks in at 5.7KB minified and gzipped, without forgoing responsive styles, design, or ease of use. Crafted with mobile devices in mind, it was important to us to keep our file sizes small, and every line of CSS was carefully considered. If you decide to only use a subset of these modules, you'll save even more bytes.
 
-For the moment it is possible to use only the responsive library, but I will change this as soon as I learn how to properly make better gems.
-
-In this alpha release (0.0.1alpha3) I added FontAwesome. But given that purecss is compatible with the Bootstrap toolkit and rails-bootstrap provides FontAwesome, I plan to remove it in a subsequent update.
-
 ## TODO
 
 I liked the idea of the light and functional Pure CSS and I think it is worthwile to create a gem for it.
@@ -35,11 +31,7 @@ And then execute:
     $ bundle
 
 
-Then you can either run the generator (with optional parameter responsive/nonresponsive):
-
-    $ rails generate purecss:install
-
-or add the following directives to your css manifest file (application.css):
+Then you can add the following directives to your css manifest file (application.css):
 
     //= require purecss
 
@@ -49,11 +41,16 @@ for the responsive bundle, or
 
 for the non-responsive one.
 
-If you want to include just an individual module (see [purecss.io](http://purecss.io)) add
+
+If you want to include just an individual module (see [purecss.io](http://purecss.io)) add instead
 
     //= require purecss/<module>.js
 
-instead.
+
+
+If it is too long for you, you can avoid touching the manifest files and run the generator (with optional parameter responsive/nonresponsive):
+
+    $ rails generate purecss:install
 
 
 ## Usage
