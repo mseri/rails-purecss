@@ -6,7 +6,7 @@ module Purecss
 
       source_root File.expand_path("../templates", __FILE__)
       desc "This generator installs Purecss to Asset Pipeline"
-      argument :stylesheets_type, :type => :string, :default => 'static', :banner => 'static'
+      argument :stylesheets_type, :type => :string, :default => 'static'
 
       def add_assets
 
@@ -36,13 +36,13 @@ module Purecss
       end
 
       def add_purecss
+        copy_file "purecss_and_overrides.css", "app/assets/stylesheets/purecss_and_overrides.css"
+        
         if use_coffeescript?
           copy_file "purecss.coffee", "app/assets/javascripts/purecss.js.coffee"
         else
           copy_file "purecss.js", "app/assets/javascripts/purecss.js"
         end
-        
-        copy_file "purecss_and_overrides.css", "app/assets/stylesheets/purecss_and_overrides.css"
       end
 
       def add_locale
