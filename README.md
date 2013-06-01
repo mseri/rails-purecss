@@ -1,7 +1,7 @@
 # Purecss
 
-Pure (purecss.io) is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.
-This gem adds it to the Assets Pipeline of Rails 3.2.
+Pure is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.
+This gem adds it to the Assets Pipeline of Rails 3.2. Additionally it provides a jquery function that automatically enables the dropdown menu without the need of YUI or other addiotional scripting.
 
 I cite directly from [purecss.io](http://purecss.io)
  > CSS with a minimal footprint.
@@ -97,7 +97,6 @@ I'd like to add
 - Toolkit to set up website palette in an easy way using SCSS
 - Way to keep the css updated
 - Any other ideas?
-
 
 ## Contributing
 
