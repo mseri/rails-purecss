@@ -4,15 +4,19 @@ module Purecss
   module Generators
     class InstallGenerator < Rails::Generators::Base
       source_root File.join(File.dirname(__FILE__), 'templates')
+      argument :stylesheets_type, :type => :string, :default => 'responsive', :banner => '*responsive or nonresponsive'
       
-      def add_assets                  
-        insert_into_file "app/assets/javascripts/application#{detect_js_format[0]}", "#{detect_js_format[1]} require purecss\n", :after => "jquery_ujs\n"
-        insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "#{detect_css_format[1]} require purecss\n", :after => "require_self\n"              
-      end
-      
-      def detect_js_format
-        return ['.js.coffee', '#='] if File.exist?('app/assets/javascripts/application.js.coffee')
-        return ['.js', '//='] if File.exist?('app/assets/javascripts/application.js')
+      def add_assets
+        if stylesheets_type=='nonresponsive'
+          purecss-type = 'pure-nr-min'
+        elsif stylesheets_type=='responsive'
+          purecss-type = 'pure-min'
+        else
+          raise "'#{stylesheets_type}'' is not recognized, use either 'responsive' or 'nonresponsive'"
+          
+        end
+
+        insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "#{detect_css_format[1]} require #{purecss-type}\n", :after => "require_self\n"              
       end
       
       def detect_css_format

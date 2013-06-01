@@ -34,13 +34,27 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
 
-    $ gem install purecss
+Then you can either run the generator (with optional parameter responsive/nonresponsive):
 
-Then run the generator 
+    $ rails generate purecss:install
 
-    $ rails generate purecss:install static
+or add the following directives to your css manifest file (application.css):
+
+    //= require purecss
+
+for the responsive bundle, or
+
+    //= require purecss-nr
+
+for the non-responsive one.
+
+If you want to include just an individual module (see [purecss.io](http://purecss.io)) add
+
+    //= require purecss/<module>.js
+
+instead.
+
 
 ## Usage
 
