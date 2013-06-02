@@ -1,4 +1,9 @@
+/*
+Symbolic Addons
+*/
+
 .pure-custom-close {
+  content:'&times;';
   float: right;
   font-size: 20px;
   font-weight: bold;
@@ -28,6 +33,10 @@
   margin-left: 2px;
 }
 
+/* ***********************************
+Menu Addons
+*********************************** */
+
 .pure-menu-custom-separator-vertical {
   background-color:#dfdfdf;
   display:block;
@@ -36,6 +45,127 @@
   font-size:0;
   overflow:hidden
 }
+
+/* ***********************************
+Alerts 
+*********************************** */
+.pure-custom-alert {
+    position: relative;
+    margin-bottom: 1em;
+    padding: 1em;
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.pure-custom-alert label {
+    display: inline-block;
+    display: inline-block;
+    *display: inline;
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    white-space: nowrap;
+}
+
+.pure-custom-alert {
+    background-color: rgb(209, 235, 238);
+    color: rgb(102, 131, 145);
+}
+.pure-custom-alert-error {
+    background-color: #D13C38;
+    color: #fff;
+}
+
+.pure-custom-alert-warning {
+    background-color: rgb(250, 191, 103);
+    color: rgb(151, 96, 13);
+}
+
+.pure-custom-alert-success {
+    background-color: rgb(83, 180, 79);
+    color: #fff;
+}
+
+
+/* *************************************
+Not yet tested
+************************************* */ 
+
+/* ***********************************
+Images 
+*********************************** */
+.pure-custom-img-rounded {
+  border-radius: 3px;
+}
+.pure-custom-img-bordered {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+/* ***********************************
+Thumbnails 
+*********************************** */
+.pure-custom-thumbnails li {
+    text-align: center;
+    display: inline-block;
+    *display: inline;
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    vertical-align: top;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    padding: 0.5em;        
+}
+
+.pure-custom-thumbnails {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pure-custom-thumbnails a:focus {
+    outline: 0 none;   
+}
+
+.pure-custom-thumb {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.pure-custom-thumb img {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: middle; /* this will remove a thin line below the image */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pure-custom-thumb-bordered {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.pure-custom-thumb .caption {
+    text-align: left;
+    display: block;
+    margin: 0 5px 6px;
+
+}
+.pure-custom-thumb .caption p {
+    margin: 0.3em 0 0;
+    font-size: 75%;
+}
+.pure-custom-thumb .caption .caption-head {
+    font-weight: bold;
+    margin-top: 0.3em;
+}
+
+.pure-custom-thumb-rounded img {
+  border-radius: 3px;
+}
+
+
 
 /* *************************************
 Experimental! The syntax/use could change 
