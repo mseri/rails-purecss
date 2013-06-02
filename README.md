@@ -1,7 +1,11 @@
 # Purecss
 
 Pure is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.
-This gem adds it to the Assets Pipeline of Rails 3.2. Additionally it provides a jquery function that automatically enables the dropdown menu without the need of YUI or other addiotional scripting.
+This gem adds Pure CSS 0.1.0 to the Assets Pipeline of Rails 3.2. 
+
+Additionally it provides
+- a jQuery function that automatically enables the dropdown menu without the need of additional rails packages/frameworks (YUI or others).
+- a small optional set of css for right-aligned horizontal menus, CSS carets (font-independent), vertical separators, ...
 
 I cite directly from [purecss.io](http://purecss.io)
  > CSS with a minimal footprint.
@@ -33,7 +37,7 @@ for the non-responsive one.
 
 If you want to include just an individual module (see [purecss.io](http://purecss.io)) add instead
 
-    *= require purecss/<module>.js
+    *= require purecss/<module>
 
 
 
@@ -44,9 +48,22 @@ If it is too long for you, you can avoid touching the manifest files and run the
 
 ## Usage
 
-After the installation you can simply go to [purecss.io](http://purecss.io) and use (or extend) their predefined styles.
+After the installation you can simply go to [purecss.io](http://purecss.io) and use their styles.
 
-Enjoy!
+### Custom CSS
+
+Add to your css manifest file, under the ```require purecss``` line:
+
+    *= require purecss-addons
+
+It provides the CSS classes 
+
+- ```pure-custom-caret``` for the dropdown menu
+- ```pure-menu-custom-separator-vertical``` to add a vertical separator to the horizontal menu
+- ```pure-custom-close``` for nicer ```x``` to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)
+- *EXPERIMENTAL* ```pure-menu-custom-pull-right``` to align the menu to the right (must be in the same tag of ```pure-menu```. _Bug: the height of the header is sligtly bigger using this class._)
+
+The flag *EXPERIMENTAL* means that the functionality is not fully functional, you can try it and use it but its syntax/use could change in a next release. If you have a fix please add a pull request!
 
 ### Dropdown Menu
 
@@ -59,18 +76,20 @@ and then use the class ```pure-menu-has-children``` for the ```li``` that will c
 add ```data-toggle="dropdown"``` to its label element (tipically an anchor), 
 and use the class ```pure-menu-children``` for the ```ul``` that contains the submenu.
 
-I hope it is clear with the following example:
+I hope it is clear with the following example (that includes the custom css too):
 ```
 <header class="header pure-u-1"> 
-  <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+  <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal pure-custom-menu-pull-right">
+      <div class="pure-menu-heading"><%= link_to "sample app", root_path, id: "logo" %></div>
         <ul>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
-            <li class="puren-menu-has-children">
-              <a href="#" data-toggle="dropdown">Account</a>
-              <ul class="pure-menu-children" role="menu">
+            <li class="pure-menu-custom-separator-vertical"></li>
+            <li class="pure-menu-can-have-children pure-menu-has-children">
+              <a href="#" data-toggle="dropdown">Account <span class="pure-custom-caret"></span></a>
+              <ul class="pure-menu-children">
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="pure-menu-separator"></li>
@@ -87,9 +106,11 @@ I hope it is clear with the following example:
 </header>
 ```
 
+My dropdown menu code do not support dropdown submenus, for that you can use YUI as in purecss.io example, or pull me a workaround :)
+
 ## TODO
 
-I liked the idea of the light and functional Pure CSS and I think it is worthwile to create a gem for it.
+Fix the pull-right menu CSS.
 
 I'd like to add
 - Helpers for navigation bars, menus, forms, grids, ...
@@ -107,6 +128,8 @@ I'd like to add
 5. Create new Pull Request
 
 ## Changelog
+
+- 0.0.4 Slightly improved dropdown (now it works even with different menu font), added purecss-custom.css
 - 0.0.3 Added Dropdown script on top of jQuery, corrected README
 - 0.0.2 Gem restructured following [Gemify Assets for Rails](http://prioritized.net/blog/gemify-assets-for-rails/), added individual modules, improved size
 

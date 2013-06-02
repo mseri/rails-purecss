@@ -1,5 +1,5 @@
 /* ============================================================
- * purecss-dropdown.js v2.3.2
+ * purecss-dropdown.js v0.0.2
  * ============================================================
  * Copyright 2013 Marcello Seri
  * Based on Twitter Bootstrap
@@ -31,7 +31,7 @@
         var $el = $(element).on('click.dropdown.data-api', this.toggle)
         $('html').on('click.dropdown.data-api', function () {
           $el.parent().removeClass('pure-menu-open')
-          $el.parent().children('.pure-menu-children').css({"left":"-10710px", "top":"-12216px"})
+          $el.parent().children('.pure-menu-children').css({"left":"-10000px", "top":"-10000px"})
         })
       }
 
@@ -58,7 +58,7 @@
           $('<div class="dropdown-backdrop"/>').insertBefore($(this)).on('click', clearMenus)
         }
         $parent.toggleClass('pure-menu-open')
-        $parent.children('.pure-menu-children').css({"left":"0px", "top":"36px"})
+        $parent.children('.pure-menu-children').css({"left":"0px", "top":(getParent($(this)).height()-2)+'px'})
       }
 
       $this.focus()
@@ -113,7 +113,7 @@
     $('.dropdown-backdrop').remove()
     $(toggle).each(function () {
       getParent($(this)).removeClass('pure-menu-open')
-      getParent($(this)).children('.pure-menu-children').css({"left":"0px", "top":"36px"})
+      getParent($(this)).children('.pure-menu-children').css({"left":"0px", "top":(getParent($(this)).height()-2)+'px'})
     })
   }
 
