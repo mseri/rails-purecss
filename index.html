@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pure CSS for Ruby on Rails by mseri</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Pure CSS for Ruby on Rails</h1>
+        <p class="header">Pure CSS (http://purecss.io) in the Assets Pipeline of Rails 3.1 and 3.2</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/mseri/rails-purecss/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/mseri/rails-purecss/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/mseri/rails-purecss">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/mseri">mseri</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="purecss-for-ruby-on-rails" class="anchor" href="#purecss-for-ruby-on-rails"><span class="octicon octicon-link"></span></a>Purecss for Ruby on Rails</h1>
+
+<p><a href="http://purecss.io">Pure</a> is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.
+This gem adds Pure CSS 0.1.0 to the Assets Pipeline of Rails 3.2. </p>
+
+<p>Additionally this gem provides</p>
+
+<ul>
+<li>a jQuery function that automatically enables the dropdown menu without the need of additional rails packages/frameworks (YUI or others).</li>
+<li>a small optional set of css for right-aligned horizontal menus, CSS carets (font-independent), vertical separators, alerts, ...</li>
+</ul><p>I cite directly from <a href="http://purecss.io">purecss.io</a></p>
+
+<blockquote>
+<p>CSS with a minimal footprint.</p>
+
+<p>Pure is ridiculously tiny. The entire set of modules clocks in at 5.7KB minified and gzipped, without forgoing responsive styles, design, or ease of use. Crafted with mobile devices in mind, it was important to us to keep our file sizes small, and every line of CSS was carefully considered. If you decide to only use a subset of these modules, you'll save even more bytes.</p>
+</blockquote>
+
+<p>Note: <a href="https://github.com/mislav/will_paginate">will_paginate</a> is integrated with purecss pagination style using the <a href="https://github.com/mseri/rails-purecss-will_paginate">purecss-will_paginate</a> gem.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'purecss'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Then you can add the following directives to your css manifest file (application.css):</p>
+
+<pre><code>*= require purecss
+</code></pre>
+
+<p>for the responsive bundle, or</p>
+
+<pre><code>*= require purecss-nr
+</code></pre>
+
+<p>for the non-responsive one.</p>
+
+<p>If you want to include just an individual module (see <a href="http://purecss.io">purecss.io</a>) add instead</p>
+
+<pre><code>*= require purecss/&lt;module&gt;
+</code></pre>
+
+<p>If it is too long for you, you can avoid touching the manifest files and run the generator (with optional parameter responsive/nonresponsive):</p>
+
+<pre><code>$ rails generate purecss:install
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>After the installation you can simply go to <a href="http://purecss.io">purecss.io</a> and use their styles.</p>
+
+<h3>
+<a name="custom-css" class="anchor" href="#custom-css"><span class="octicon octicon-link"></span></a>Custom CSS</h3>
+
+<p>Add to your css manifest file, under the <code>require purecss</code> line:</p>
+
+<pre><code>*= require purecss-addons
+</code></pre>
+
+<p>It provides the CSS classes </p>
+
+<ul>
+<li>
+<code>pure-custom-caret</code> for the dropdown menu</li>
+<li>
+<code>pure-menu-custom-separator-vertical</code> to add a vertical separator to the horizontal menu</li>
+<li>
+<code>pure-custom-close</code> for nicer <code>x</code> to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)</li>
+<li>
+<code>pure-custom-alert</code>, <code>pure-custom-alert-error</code>, <code>pure-custo-alert-success</code>, <code>pure-custom-alert-warning</code>
+</li>
+<li>...</li>
+</ul><h3>
+<a name="dropdown-menu" class="anchor" href="#dropdown-menu"><span class="octicon octicon-link"></span></a>Dropdown Menu</h3>
+
+<p>For dropdown menu I developed a small workaround based on the code of <a href="https://github.com/twitter/bootstrap/blob/master/js/bootstrap-dropdown.js">bootstrap-dropdown.js</a>.
+It is enough to add the following directive to your js manifest file (application.js):</p>
+
+<pre><code>//= require purecss-dropdown
+</code></pre>
+
+<p>and then use the class <code>pure-menu-has-children</code> for the <code>li</code> that will contain the submenu, 
+add <code>data-toggle="dropdown"</code> to its label element (tipically an anchor), 
+and use the class <code>pure-menu-children</code> for the <code>ul</code> that contains the submenu.</p>
+
+<p>I hope it is clear with the following example (that includes the custom css too):</p>
+
+<pre><code>&lt;header class="header pure-u-1"&gt; 
+  &lt;div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal"&gt;
+      &lt;div class="pure-menu-heading"&gt;&lt;%= link_to "sample app", root_path, id: "logo" %&gt;&lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;%= link_to "Home", root_path %&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;%= link_to "Help", help_path %&gt;&lt;/li&gt;
+          &lt;% if signed_in? %&gt;
+            &lt;li&gt;&lt;%= link_to "Users", users_path %&gt;&lt;/li&gt;
+            &lt;li class="pure-menu-custom-separator-vertical"&gt;&lt;/li&gt;
+            &lt;li class="pure-menu-can-have-children pure-menu-has-children"&gt;
+              &lt;a href="#" data-toggle="dropdown"&gt;Account &lt;span class="pure-custom-caret"&gt;&lt;/span&gt;&lt;/a&gt;
+              &lt;ul class="pure-menu-children"&gt;
+                &lt;li&gt;&lt;%= link_to "Profile", current_user %&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;%= link_to "Settings", edit_user_path(current_user) %&gt;&lt;/li&gt;
+                &lt;li class="pure-menu-separator"&gt;&lt;/li&gt;
+                &lt;li&gt;
+                  &lt;%= link_to "Sign Out", signout_path, method: "delete" %&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;% else %&gt;
+            &lt;li&gt;&lt;%= link_to "Sign In", signin_path %&gt;&lt;/li&gt;
+          &lt;% end %&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+
+<p>The actual dropdown menu code do not support dropdown submenus, for that you can use YUI as in purecss.io example, or pull me a workaround :)</p>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
