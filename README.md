@@ -129,7 +129,7 @@ I'd like to add
 5. Create new Pull Request
 
 ## Changelog
-
+- 0.0.6 Reorganized CSS Addon structure
 - 0.0.5 Slightly improved dropdown (now it works even with different menu font), added purecss-custom.css
 - 0.0.3 Added Dropdown script on top of jQuery, corrected README
 - 0.0.2 Gem restructured following [Gemify Assets for Rails](http://prioritized.net/blog/gemify-assets-for-rails/), added individual modules, improved size
