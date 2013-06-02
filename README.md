@@ -5,7 +5,7 @@ This gem adds Pure CSS 0.1.0 to the Assets Pipeline of Rails 3.2.
 
 Additionally it provides
 - a jQuery function that automatically enables the dropdown menu without the need of additional rails packages/frameworks (YUI or others).
-- a small optional set of css for right-aligned horizontal menus, CSS carets (font-independent), vertical separators, ...
+- a small optional set of css for right-aligned horizontal menus, CSS carets (font-independent), vertical separators, alerts, ...
 
 I cite directly from [purecss.io](http://purecss.io)
  > CSS with a minimal footprint.
@@ -62,6 +62,7 @@ It provides the CSS classes
 - ```pure-custom-caret``` for the dropdown menu
 - ```pure-menu-custom-separator-vertical``` to add a vertical separator to the horizontal menu
 - ```pure-custom-close``` for nicer ```x``` to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)
+- ```pure-custom-alert```, ```pure-custom-alert-error```, ```pure-custo-alert-success```, ```pure-custom-alert-warning```
 - *EXPERIMENTAL* ```pure-menu-custom-pull-right``` to align the menu to the right (must be in the same tag of ```pure-menu```. _Bug: the height of the header is sligtly bigger using this class._)
 
 The flag *EXPERIMENTAL* means that the functionality is not fully functional, you can try it and use it but its syntax/use could change in a next release. If you have a fix please add a pull request!
@@ -129,7 +130,7 @@ I'd like to add
 5. Create new Pull Request
 
 ## Changelog
-- 0.0.6 Reorganized CSS Addon structure
+- 0.0.6 Reorganized CSS Addon structure, added Alerts
 - 0.0.5 Slightly improved dropdown (now it works even with different menu font), added purecss-custom.css
 - 0.0.3 Added Dropdown script on top of jQuery, corrected README
 - 0.0.2 Gem restructured following [Gemify Assets for Rails](http://prioritized.net/blog/gemify-assets-for-rails/), added individual modules, improved size
