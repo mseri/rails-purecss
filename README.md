@@ -12,6 +12,7 @@ I cite directly from [purecss.io](http://purecss.io)
  >
  > Pure is ridiculously tiny. The entire set of modules clocks in at 5.7KB minified and gzipped, without forgoing responsive styles, design, or ease of use. Crafted with mobile devices in mind, it was important to us to keep our file sizes small, and every line of CSS was carefully considered. If you decide to only use a subset of these modules, you'll save even more bytes.
 
+Note: [will_paginate](https://github.com/mislav/will_paginate) is integrated with purecss pagination style using the [purecss-will_paginate](https://github.com/mseri/rails-purecss-will_paginate) gem.
 
 ## Installation
 
