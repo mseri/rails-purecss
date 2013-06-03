@@ -14,6 +14,9 @@ I cite directly from [purecss.io](http://purecss.io)
 
 Note: [will_paginate](https://github.com/mislav/will_paginate) is integrated with purecss pagination style using the [purecss-will_paginate](https://github.com/mseri/rails-purecss-will_paginate) gem.
 
+[![Build Status](https://travis-ci.org/mseri/rails-purecss.png?branch=master)](https://travis-ci.org/mseri/rails-purecss.png?branch=master)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
