@@ -133,6 +133,7 @@ I'd like to add
 5. Create new Pull Request
 
 ## Changelog
+- 0.0.9 Problem in pushing the new gem, needed another version number to push it again
 - 0.0.8 Travis support, Rakefile corrected
 - 0.0.7 Fixed dependencies
 - 0.0.6 Reorganized CSS Addon structure, added Alerts
