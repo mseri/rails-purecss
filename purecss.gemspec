@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Pure CSS (purecss.io) toolkit for Rails Asset Pipeline}
   spec.summary       = %q{purecss gem integrates the Pure CSS (purecss.io) toolkit to the Rails Asset Pipeline.}
   spec.homepage      = "https://github.com/mseri/rails-purecss"
+  spec.license       = "MIT"
 
   spec.files = Dir["{app,lib,vendor}/**/*"] + ["README.md"]
   #spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
