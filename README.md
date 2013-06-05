@@ -63,7 +63,7 @@ Add to your css manifest file, under the ```require purecss``` line:
 It provides the CSS classes 
 
 - ```pure-custom-caret``` for the dropdown menu
-- ```pure-menu-custom-separator-vertical``` to add a vertical separator to the horizontal menu
+- (no more needed) ```pure-menu-custom-separator-vertical``` to add a vertical separator to the horizontal menu
 - ```pure-custom-close``` for nicer ```x``` to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)
 - ```pure-custom-alert```, ```pure-custom-alert-error```, ```pure-custo-alert-success```, ```pure-custom-alert-warning```
 - *EXPERIMENTAL* ```pure-menu-custom-pull-right``` to align the menu to the right (must be in the same tag of ```pure-menu```. _Bug: the height of the header is sligtly bigger using this class._)
@@ -133,6 +133,7 @@ I'd like to add
 5. Create new Pull Request
 
 ## Changelog
+- 0.0.10 Updated with new Pure css git version. No more need of some of our customizations. 
 - 0.0.9 Problem in pushing the new gem, needed another version number to push it again
 - 0.0.8 Travis support, Rakefile corrected
 - 0.0.7 Fixed dependencies
