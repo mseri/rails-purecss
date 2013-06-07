@@ -83,7 +83,7 @@ and then use the class ```pure-menu-has-children``` for the ```li``` that will c
 add ```data-toggle="dropdown"``` to its label element (tipically an anchor), 
 and use the class ```pure-menu-children``` for the ```ul``` that contains the submenu.
 
-I hope it is clear with the following example (that includes the custom css too):
+I hope it becomes clear with the following example:
 ```
 <header class="header pure-u-1"> 
   <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
