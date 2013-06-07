@@ -65,6 +65,7 @@ for this workaround http://jsfiddle.net/xUwCw/ */
 }
 .pure-menu-rtl.pure-menu-pull-right > ul {
     text-align: left;
+    direction: ltr;
 }
 
 /* ***********************************
