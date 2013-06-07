@@ -62,13 +62,15 @@ Add to your css manifest file, under the ```require purecss``` line:
 
 It provides the CSS classes 
 
-- ```pure-custom-caret``` for the dropdown menu
+- ```pure-custom-caret``` for the dropdown menu (to use if you are not using FontAwsome)
 - (no more needed) ```pure-menu-custom-separator-vertical``` to add a vertical separator to the horizontal menu
 - ```pure-custom-close``` for nicer ```x``` to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)
 - ```pure-custom-alert```, ```pure-custom-alert-error```, ```pure-custo-alert-success```, ```pure-custom-alert-warning```
-- *EXPERIMENTAL* ```pure-menu-custom-pull-right``` to align the menu to the right (must be in the same tag of ```pure-menu```. _Bug: the height of the header is sligtly bigger using this class._)
+- ```pure-menu-pull-right``` to align the menu to the right (must be in the same tag of ```pure-menu```, see [this example](http://jsfiddle.net/xUwCw/)). Thanks to [msweeney](https://github.com/msweeney) for this workaround.
 
-The flag *EXPERIMENTAL* means that the functionality is not fully functional, you can try it and use it but its syntax/use could change in a next release. If you have a fix please add a pull request!
+<!--
+  The flag *EXPERIMENTAL* means that the functionality is not fully functional, you can try it and use it but its syntax/use could change in a next release. If you have a fix please add a pull request! 
+  /-->
 
 ### Dropdown Menu
 
@@ -84,14 +86,13 @@ and use the class ```pure-menu-children``` for the ```ul``` that contains the su
 I hope it is clear with the following example (that includes the custom css too):
 ```
 <header class="header pure-u-1"> 
-  <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal pure-custom-menu-pull-right">
+  <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
       <div class="pure-menu-heading"><%= link_to "sample app", root_path, id: "logo" %></div>
         <ul>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
-            <li class="pure-menu-custom-separator-vertical"></li>
             <li class="pure-menu-can-have-children pure-menu-has-children">
               <a href="#" data-toggle="dropdown">Account <span class="pure-custom-caret"></span></a>
               <ul class="pure-menu-children">
@@ -119,8 +120,8 @@ Fix the pull-right menu CSS.
 
 I'd like to add
 - Helpers for navigation bars, menus, forms, grids, ...
-- Integration wit Rails SCSS
-- Toolkit to set up website palette in an easy way using SCSS
+- Integration wit Rails SASS
+- Toolkit to set up website palette in an easy way using SASS
 - Way to keep the css updated
 - Any other ideas?
 
@@ -133,6 +134,7 @@ I'd like to add
 5. Create new Pull Request
 
 ## Changelog
+- 0.0.11 New Pure css git bugfixes added, added working menu-pull-right workaround
 - 0.0.10 Updated with new Pure css git version. No more need of some of our customizations. 
 - 0.0.9 Problem in pushing the new gem, needed another version number to push it again
 - 0.0.8 Travis support, Rakefile corrected

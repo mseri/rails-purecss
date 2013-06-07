@@ -172,8 +172,8 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
   -ms-transition: 0.3s linear border;
   -o-transition: 0.3s linear border;
   transition: 0.3s linear border;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
@@ -189,7 +189,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 .pure-form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus {
   outline: thin dotted #333;
-  outline: 1px auto #129FEA;    
+  outline: 1px auto #129FEA;
 }
 .pure-form .pure-checkbox,
 .pure-form .pure-radio {
@@ -250,9 +250,9 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
   border-bottom: 1px solid #e5e5e5;
 }
 
-.pure-form.pure-form-stacked input[type='text'],
-.pure-form.pure-form-stacked select,
-.pure-form.pure-form-stacked label {
+.pure-form-stacked input[type='text'],
+.pure-form-stacked select,
+.pure-form-stacked label {
   display: block;
 }
 
@@ -285,7 +285,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 /* Rounded Inputs */
 .pure-form .pure-input-rounded {
   border-radius: 20px;
-  padding-left:1em;
+  padding-left: 1em;
 }
 
 /* Grouped Inputs */

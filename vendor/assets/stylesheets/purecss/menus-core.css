@@ -4,6 +4,9 @@ Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 .pure-menu ul {
     position: absolute;
     visibility: hidden;
@@ -45,15 +48,15 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
-    margin: 0;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
+    margin: 0;
     vertical-align: middle;
 }
 .pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
     height: 2.4em;
 }
@@ -69,7 +72,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 .pure-menu-separator {
@@ -81,7 +84,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     overflow: hidden;
 }
 
-.pure-menu-hidden { display: none; }
+.pure-menu-hidden {
+    display: none;
+}
 
 /* FIXED MENU */
 .pure-menu-fixed {
@@ -97,8 +102,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal li {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
 }
 

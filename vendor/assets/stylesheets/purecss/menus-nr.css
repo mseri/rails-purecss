@@ -4,6 +4,9 @@ Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 .pure-menu ul {
     position: absolute;
     visibility: hidden;
@@ -45,15 +48,15 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
     display: inline-block;
-    margin: 0;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
+    margin: 0;
     vertical-align: middle;
 }
 .pure-menu.pure-menu-horizontal > ul {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
     height: 2.4em;
 }
@@ -69,7 +72,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 .pure-menu-can-have-children > .pure-menu-label {
-    padding-right:30px;
+    padding-right: 30px;
 }
 
 .pure-menu-separator {
@@ -81,7 +84,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     overflow: hidden;
 }
 
-.pure-menu-hidden { display: none; }
+.pure-menu-hidden {
+    display: none;
+}
 
 /* FIXED MENU */
 .pure-menu-fixed {
@@ -97,8 +102,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 /* Initial menus should be inline-block so that they are horizontal */
 .pure-menu-horizontal li {
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    zoom: 1;
     vertical-align: middle;
 }
 
@@ -131,6 +136,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 /* MAIN MENU STYLING */
 
 .pure-menu.pure-menu-open,
@@ -140,7 +148,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal, .pure-menu.pure-menu-horizontal .pure-menu-heading {
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
     border: none;
 }
 
@@ -192,8 +201,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-menu .pure-menu-heading {
     color: #565d64;
     text-transform: uppercase;
-    font-size:90%;
-    margin-top:0.5em;
+    font-size: 90%;
+    margin-top: 0.5em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #dfdfdf;
@@ -210,6 +219,9 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     border-bottom: 1px solid #b7b7b7;
 }
 
+/*csslint box-model:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+
 .pure-paginator {
     list-style: none;
     margin: 0;
@@ -218,8 +230,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 .pure-paginator li {
     display: inline-block;
     *display: inline;
-    /* IE 7 inline-block hack */
-    *zoom: 1;
+    zoom: 1;
     margin: 0 -0.35em 0 0;
 }
 .pure-paginator .pure-button {
@@ -233,7 +244,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 .pure-paginator .prev, .pure-paginator .next {
     color: #C0C1C3;
-    text-shadow: 0px -1px 0px rgba(0,0,0, 0.45);
+    text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
 }
 .pure-paginator .prev {
     border-radius: 2px 0 0 2px;

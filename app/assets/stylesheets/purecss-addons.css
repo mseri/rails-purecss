@@ -38,12 +38,37 @@ Menu Addons
 *********************************** */
 
 .pure-menu-custom-separator-vertical {
+  /* Deprecated */
   background-color:#dfdfdf;
   display:block;
   width: 1px;
   height: 20px;
   font-size:0;
   overflow:hidden
+} 
+
+/* thanks to @msweeney https://github.com/msweeney
+for this workaround http://jsfiddle.net/xUwCw/ */
+.pure-menu .pure-menu-pull-right {
+    background: #ccc;
+    display: table;
+    width: 100%;
+    height: 5em;
+    margin-bottom: 1em;
+}
+.pure-menu.pure-menu-pull-right .pure-menu-heading,
+.pure-menu.pure-menu-pull-right > ul {
+    display: table-cell;
+    vertical-align: middle;
+}
+.pure-menu.pure-menu-pull-right > ul {
+    text-align: right;
+}
+.pure-menu-rtl {
+    direction: rtl;
+}
+.pure-menu-rtl.pure-menu-pull-right > ul {
+    text-align: left;
 }
 
 /* ***********************************
@@ -172,10 +197,12 @@ Experimental! The syntax/use could change
 in the near future
 ************************************** */
 .pure-menu-custom-pull-right {
+  /*Deprecated*/
   text-align: justify;
 }
 
 .pure-menu-custom-pull-right:after {
+  /*Deprecated*/
   content: '';
   display: inline-block;
   width: 100%;
