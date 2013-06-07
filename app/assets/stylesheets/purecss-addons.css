@@ -49,12 +49,8 @@ Menu Addons
 
 /* thanks to @msweeney https://github.com/msweeney
 for this workaround http://jsfiddle.net/xUwCw/ */
-.pure-menu .pure-menu-pull-right {
-    background: #ccc;
+.pure-menu.pure-menu-pull-right {
     display: table;
-    width: 100%;
-    height: 5em;
-    margin-bottom: 1em;
 }
 .pure-menu.pure-menu-pull-right .pure-menu-heading,
 .pure-menu.pure-menu-pull-right > ul {
