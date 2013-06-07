@@ -114,17 +114,6 @@ I hope it becomes clear with the following example:
 
 My dropdown menu code do not support dropdown submenus, for that you can use YUI as in purecss.io example, or pull me a workaround :)
 
-## TODO
-
-Fix the pull-right menu CSS.
-
-I'd like to add
-- Helpers for navigation bars, menus, forms, grids, ...
-- Integration wit Rails SASS
-- Toolkit to set up website palette in an easy way using SASS
-- Way to keep the css updated
-- Any other ideas?
-
 ## Contributing
 
 1. Fork it

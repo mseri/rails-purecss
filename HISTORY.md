@@ -1,3 +1,12 @@
+# TODO
+I'd like to add
+- Helpers for navigation bars, menus, forms, grids, ...
+- Integration wit Rails SASS
+- Toolkit to set up website palette in an easy way using SASS
+- Way to keep the css updated
+- Any other ideas?
+
+
 # Changelog
 - 0.0.11 New Pure css git bugfixes added, added working menu-pull-right workaround
 - 0.0.10 Updated with new Pure css git version. No more need of some of our customizations. 
