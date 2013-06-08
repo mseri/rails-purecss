@@ -105,13 +105,12 @@ This gem adds Pure CSS 0.1.0 to the Assets Pipeline of Rails 3.2. </p>
 <li>
 <code>pure-custom-caret</code> for the dropdown menu</li>
 <li>
-<code>pure-menu-custom-separator-vertical</code> to add a vertical separator to the horizontal menu</li>
-<li>
 <code>pure-custom-close</code> for nicer <code>x</code> to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)</li>
 <li>
 <code>pure-custom-alert</code>, <code>pure-custom-alert-error</code>, <code>pure-custo-alert-success</code>, <code>pure-custom-alert-warning</code>
 </li>
-<li>...</li>
+<li>
+<code>pure-menu-pull-right</code> to align the menu to the right (must be in the same tag of <code>pure-menu</code>, see this <a class="anchor" href="http://jsfiddle.net/xUwCw/">example</a>). Thanks to <a class="anchor" href="https://github.com/msweeney">msweeney</a> for this workaround.</li>
 </ul><h3>
 <a name="dropdown-menu" class="anchor" href="#dropdown-menu"><span class="octicon octicon-link"></span></a>Dropdown Menu</h3>
 
@@ -125,7 +124,7 @@ It is enough to add the following directive to your js manifest file (applicatio
 add <code>data-toggle="dropdown"</code> to its label element (tipically an anchor), 
 and use the class <code>pure-menu-children</code> for the <code>ul</code> that contains the submenu.</p>
 
-<p>I hope it is clear with the following example (that includes the custom css too):</p>
+<p>I hope it is clear with the following example:</p>
 
 <pre><code>&lt;header class="header pure-u-1"&gt; 
   &lt;div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal"&gt;
@@ -135,7 +134,6 @@ and use the class <code>pure-menu-children</code> for the <code>ul</code> that c
           &lt;li&gt;&lt;%= link_to "Help", help_path %&gt;&lt;/li&gt;
           &lt;% if signed_in? %&gt;
             &lt;li&gt;&lt;%= link_to "Users", users_path %&gt;&lt;/li&gt;
-            &lt;li class="pure-menu-custom-separator-vertical"&gt;&lt;/li&gt;
             &lt;li class="pure-menu-can-have-children pure-menu-has-children"&gt;
               &lt;a href="#" data-toggle="dropdown"&gt;Account &lt;span class="pure-custom-caret"&gt;&lt;/span&gt;&lt;/a&gt;
               &lt;ul class="pure-menu-children"&gt;
@@ -157,16 +155,6 @@ and use the class <code>pure-menu-children</code> for the <code>ul</code> that c
 
 <p>The actual dropdown menu code do not support dropdown submenus, for that you can use YUI as in purecss.io example, or pull me a workaround :)</p>
 
-<h2>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
-
-<ol>
-<li>Fork it</li>
-<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
-<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
-<li>Create new Pull Request</li>
-</ol>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
