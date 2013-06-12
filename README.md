@@ -1,7 +1,7 @@
 # Purecss
 
 Pure is a set of small, responsive CSS modules that you can use in every web project realized by the yahoo developer team.
-This gem adds Pure CSS 0.1.0 to the Assets Pipeline of Rails 3.2. 
+This gem adds Pure CSS 0.2.0 to the Assets Pipeline of Rails 3.2. 
 
 Additionally it provides
 - a jQuery function that automatically enables the dropdown menu without the need of additional rails packages/frameworks (YUI or others).

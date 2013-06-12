@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/mseri/rails-purecss"
   spec.license       = "MIT"
 
-  spec.files = Dir["{app,lib,vendor}/**/*"] + ["README.md"]
+  spec.files = Dir["{app,lib,vendor}/**/*"] + ["README.md", "HISTORY.md"]
   #spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 

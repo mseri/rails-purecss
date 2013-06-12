@@ -8,6 +8,7 @@ I'd like to add
 
 
 # Changelog
+- 0.2.0 New purecss 0.2.0 and redefined renumeration
 - 0.0.11 New Pure css git bugfixes added, added working menu-pull-right workaround
 - 0.0.10 Updated with new Pure css git version. No more need of some of our customizations. 
 - 0.0.9 Problem in pushing the new gem, needed another version number to push it again

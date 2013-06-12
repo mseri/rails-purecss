@@ -1,5 +1,5 @@
 /*!
-Pure v0.1.1-pre
+Pure v0.2.1-pre
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -22,7 +22,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /* Firefox: Get rid of the inner focus border */
-.pure-button::-moz-focus-inner{
+.pure-button::-moz-focus-inner {
     padding: 0;
     border: 0;
 }

@@ -1,5 +1,5 @@
 /*!
-Pure v0.1.1-pre
+Pure v0.2.1-pre
 Copyright 2013 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -200,7 +200,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     max-width: 100%;
 }
 
-@media (min-width:980px) {
+@media (min-width: 980px) {
     .pure-visible-phone {
         display: none;
     }
@@ -211,13 +211,15 @@ https://github.com/yui/pure/blob/master/LICENSE.md
         display: none;
     }
 }
-@media (max-width:480px) {
+
+@media (max-width: 480px) {
     .pure-g-r > .pure-u,
     .pure-g-r > [class *= "pure-u-"] {
         width: 100%;
     }
 }
-@media (max-width:767px) {
+
+@media (max-width: 767px) {
     .pure-g-r > .pure-u,
     .pure-g-r > [class *= "pure-u-"] {
         width: 100%;
@@ -229,7 +231,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
         display: none;
     }
 }
-@media (min-width:768px) and (max-width:979px) {
+
+@media (min-width: 768px) and (max-width: 979px) {
     .pure-hidden-tablet {
         display: none;
     }
