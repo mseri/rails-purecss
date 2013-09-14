@@ -8,6 +8,7 @@ I'd like to add
 
 
 # Changelog
+- 0.3.0 Purecss updated to the new 0.3.0 release
 - 0.2.1 Purecss updated to the new 0.2.1 release
 - 0.2.0 New purecss 0.2.0 and redefined renumeration
 - 0.0.11 New Pure css git bugfixes added, added working menu-pull-right workaround
