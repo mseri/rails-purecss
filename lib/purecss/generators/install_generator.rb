@@ -8,15 +8,15 @@ module Purecss
       
       def add_assets
         if stylesheets_type=='nonresponsive'
-          purecss-type = 'pure-nr-min'
+          purecss_type = 'pure-nr-min'
         elsif stylesheets_type=='responsive'
-          purecss-type = 'pure-min'
+          purecss_type = 'pure-min'
         else
           raise "'#{stylesheets_type}'' is not recognized, use either 'responsive' or 'nonresponsive'"
           
         end
 
-        insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "#{detect_css_format[1]} require #{purecss-type}\n", :after => "require_self\n"              
+        insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "#{detect_css_format[1]} require #{purecss_type}\n", :after => "require_self\n"              
       end
       
       def detect_css_format
