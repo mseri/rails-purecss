@@ -1,5 +1,5 @@
 /*!
-Pure v0.5.0-pre
+Pure v0.5.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
@@ -128,15 +128,15 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 
 /* Adjusting separator for vertical menus */
 .pure-menu-horizontal li.pure-menu-separator {
-	height: 50%;
-	width: 1px;
-	margin: 0 7px;
+    height: 50%;
+    width: 1px;
+    margin: 0 7px;
 }
 
 /* Submenus should be horizontal separator again */
 .pure-menu-horizontal li li.pure-menu-separator {
-	height: 1px;
-	width: auto;
-	margin: 7px 2px;
+    height: 1px;
+    width: auto;
+    margin: 7px 2px;
 }
 
