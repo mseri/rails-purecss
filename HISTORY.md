@@ -8,6 +8,8 @@ I'd like to add
 
 
 # Changelog
+- 0.5.0.1 Fixed generator name (thanks [sespindola](https://github.com/mseri/rails-purecss/pull/4))
+- 0.5 Purecss updated to the new 0.5.0 release (thanks [ruslanpa](https://github.com/mseri/rails-purecss/pull/3))
 - 0.4.2.1 Fixed bug, thanks to
   [sespindola](https://github.com/mseri/rails-purecss/pull/2)
 - 0.4.2 Purecss updated to the new 0.4.2 release
