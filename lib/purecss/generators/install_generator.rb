@@ -8,9 +8,9 @@ module Purecss
       
       def add_assets
         if stylesheets_type=='nonresponsive'
-          purecss_type = 'pure-nr-min'
+          purecss_type = 'purecss-nr'
         elsif stylesheets_type=='responsive'
-          purecss_type = 'pure-min'
+          purecss_type = 'purecss'
         else
           raise "'#{stylesheets_type}'' is not recognized, use either 'responsive' or 'nonresponsive'"
           
