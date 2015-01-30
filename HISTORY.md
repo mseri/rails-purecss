@@ -8,6 +8,7 @@ I'd like to add
 
 
 # Changelog
+- 0.5.0.2 Added `add_viewport_meta` flag to the generator (default: false). See [closed issue](https://github.com/mseri/rails-purecss/issues/6) 
 - 0.5.0.1 Fixed generator name (thanks [sespindola](https://github.com/mseri/rails-purecss/pull/4))
 - 0.5 Purecss updated to the new 0.5.0 release (thanks [ruslanpa](https://github.com/mseri/rails-purecss/pull/3))
 - 0.4.2.1 Fixed bug, thanks to

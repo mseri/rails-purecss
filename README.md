@@ -49,6 +49,7 @@ If it is too long for you, you can avoid touching the manifest files and run the
 
     $ rails generate purecss:install
 
+To add the viewport meta in the head of your application.html.erb it is enough to append `--add_viewport_meta` when you run the generator.
 
 ## Usage
 
