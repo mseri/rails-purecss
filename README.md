@@ -66,7 +66,7 @@ It provides the CSS classes
 - ```pure-custom-caret``` for the dropdown menu (to use if you are not using FontAwsome)
 - (no more needed) ```pure-menu-custom-separator-vertical``` to add a vertical separator to the horizontal menu
 - ```pure-custom-close``` for nicer ```x``` to close eventual modal views (to display modals, bootstrap-modal works quite well with Pure)
-- ```pure-custom-alert```, ```pure-custom-alert-error```, ```pure-custo-alert-success```, ```pure-custom-alert-warning```
+- ```pure-custom-alert```, ```pure-custom-alert-error```, ```pure-custom-alert-success```, ```pure-custom-alert-warning```
 - ```pure-menu-pull-right``` to align the menu to the right (must be in the same tag of ```pure-menu```, see [this example](http://jsfiddle.net/xUwCw/)). Thanks to [msweeney](https://github.com/msweeney) for this workaround.
 
 <!--
